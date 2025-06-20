@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .apresentacao {
+      padding: 60px 20px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .conteudo-apresentacao {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .foto img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .texto {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .texto h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #012e40;
+    }
+
+    .texto p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #333;
+
+      .linha-do-tempo {
+        padding: 50px 20px;
+        background-color: #ffffff;
+      }
+
+      .linha-do-tempo h2 {
+        font-size: 2.2rem;
+        color: #012e40;
+        margin-bottom: 30px;
+        border-left: 5px solid #0bbfd5;
+        padding-left: 10px;
+      }
+
+      .linha-do-tempo ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .linha-do-tempo li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .linha-do-tempo li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 12px;
+        height: 12px;
+        background-color: #0bbfd5;
+        border-radius: 50%;
+      }
+
+      .linha-do-tempo .ano {
+        font-weight: bold;
+        color: #0b99d5;
+        margin-right: 10px;
+      }
+
+    }
+
+    .missao {
+      padding: 60px 20px;
+      background-color: #e0f4fd;
+      border-top: 3px solid #0bbfd5;
+      border-bottom: 3px solid #0bbfd5;
+    }
+
+    .missao h2 {
+      font-size: 2.2rem;
+      color: #012e40;
+      margin-bottom: 30px;
+      border-left: 5px solid #0bbfd5;
+      padding-left: 10px;
+    }
+
+    .missao p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .curiosidades {
+      padding: 60px 20px;
+      background-color: #ffffff;
+    }
+
+    .curiosidades h2 {
+      font-size: 2.2rem;
+      color: #012e40;
+      margin-bottom: 25px;
+      border-left: 5px solid #0bbfd5;
+      padding-left: 10px;
+    }
+
+    .curiosidades ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .curiosidades li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 12px;
+      color: #333;
+    }
+
+    .citacao-final {
+      padding: 40px 20px;
+      background-color: #e0f4fd;
+      text-align: center;
+    }
+
+    .citacao-final blockquote {
+      font-size: 1.3rem;
+      font-style: italic;
+      color: #0b3b5c;
+      border-left: 4px solid #0bbfd5;
+      padding-left: 20px;
+      margin: 0 auto;
+      max-width: 700px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="apresentacao container">
+    <div class="conteudo-apresentacao">
+      <!-- Imagem à esquerda ou direita -->
+      <div class="foto">
+        <img src="{{url_for('static', filename='img/perfil.jpg')}}" alt="Foto de Cientista Muhilica">
+      </div>
+      <div class="texto">
+        <h1><span class="text-primary">Quem Sou Eu?</span></h1>
+        <p>
+          Olá! Sou o Rafael Matuca Muhilica, filho de António Muhilica e de Ângela Isseca José Romeu. Natural da Lunda
+          Norte, Munícípio de Chitato, desde muito pequeo fui apaixonado em estudar e entender como os sistemas digitais
+          funcionam, como a Computação funcioana, amo ensinar, aprender e transformar conhecimento em ferramentas
+          práticas.
+          Desde cedo, sempre acreditei que a educação deve ser acessível e envolvente. Ao longo da minha jornada
+          universitária, descobri na programação uma nova forma de ensinar e inovar.
+          <br><br>
+          Atualmente, trabalho como desenvolvedor Python, na criação de apps responsivos e com base em Python entre
+          outras áras da tecnologia.
+          Minha missão é clara: levar conhecimento real a todos os cantos, com simplicidade, profundidade e impacto.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="linha-do-tempo container">
+    <h2>Minha Jornada</h2>
+    <ul>
+      <li>
+        <span class="ano">2020</span>
+        Início do curso Médio em Contabilidade e Gestão no Instituto Politecnico 28 de Agosto. Dundo
+      </li>
+      <li>
+        <span class="ano">2024</span>
+        Desenvolvimento do Projeto de final de curso Com o Título : Fatores que influênciam na precificação dos produtos
+        da Cesta Básica em Angola
+      </li>
+      <li>
+        <span class="ano">2024</span>
+        Inicio da Lincenciatura em Ciências da Computação no Instituto Superior Politécnico Metropoltano de Angola.
+      </li>
+      <li>
+        <span class="ano">2024</span>
+        .Desenvolvimento de protótipo para Gestão de Monografias universitárias usando o Figma
+      </li>
+      <li>
+        <span class="ano">2025</span>
+        Projeto de pesquisa com foco na Analíse Dados.
+      </li>
+      <span class="ano">2025</span>
+      Lançamento meu primeiro Web Site usando o Flask.
+      </li>
+    </ul>
+  </section>
+  <section class="missao container">
+    <h2>Minha Missão</h2>
+    <p>
+      Minha missão é ** visa dar Solução a problemas existente em África precisamente em Angola** por meio de um Sistema
+      Capaz de mitigar alguns problemas.
+      Quero tornar o estudo da Programação mais acessível, experimental e envolvente — unindo recursos digitais com
+      prática educativa.
+    </p>
+
+    <p>
+      Acredito que a programação é uma ferramenta de empoderamento social e educacional.
+      Meus projetos buscam **resolver problemas reais** vividos por estudantes e professores nas escolas e
+      universidades.
+    </p>
+
+    <p>
+      Como Cientista Muhilica, sonho em formar uma nova geração de pensadores criativos, capazes de construir um futuro
+      melhor com base no conhecimento.
+    </p>
+  </section>
+  <section class="curiosidades container">
+    <h2>Curiosidades sobre Mim</h2>
+    <ul>
+      <li> Livro que me marcou: <strong>“Uma História do Mundo <span class="text-primary">"David Coimbra"</span>”</strong></li>
+      <li>Fico empolgado quando consigo <strong>resolver problemas complexos</strong></li>
+      <li> Sonho em <strong>fundar um centro educacional de inovação em Angola</strong></li>
+      <li>💬 Frase favorita: <em>“Educação é a arma mais poderosa que se pode usar para mudar o mundo.” – Nelson
+          Mandela</em></li>
+    </ul>
+  </section>
+  <section class="citacao-final container">
+    <blockquote>
+      “O conhecimento é a base do sucesso, por invista ao máximo para obte-lo”
+      <br>— Cientista Muhilica
+    </blockquote>
+  </section>
+
+
+  <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+</body>
+
+</html>

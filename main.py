@@ -4,10 +4,10 @@ app = Flask(__name__)
 bootstrap = Bootstrap(app)
 @app.route("/") 
 def home ():
-    return render_template("inicio.html")
-@app.route("/inicio.html") 
+    return render_template("index.html")
+@app.route("/index.html") 
 def inicio ():
-    return render_template("inicio.html")
+    return render_template("index.html")
 @app.route("/contato.html") 
 def homepage ():
     return render_template("contato.html")
